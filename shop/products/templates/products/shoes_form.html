@@ -1,0 +1,14 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+Создать продукт
+{% endblock %}
+
+{% block body %}
+<h2>Заполните поля, чтобы создать продукт, {{ user.username }}</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Создать товар</button>
+</form>
+{% endblock %}
