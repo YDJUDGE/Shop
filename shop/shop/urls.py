@@ -24,7 +24,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("products/", include("products.urls")),
     path("myauth/", include("myauth.urls")),
-    path("cart/", include("cart.urls"))
+    path("cart/", include("cart.urls")),
+    path("order/", include("shop_orders.urls"))
 ]
 
 # Для обработки картинок

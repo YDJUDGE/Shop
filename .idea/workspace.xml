@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1be0775f-5e0d-4c44-9086-efec0624d5ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/media/products_images/Air_jordan_1_7DvXLxI.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/myauth/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/myauth/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/myauth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/myauth/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/cart/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/cart/templates/cart/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/shop/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>

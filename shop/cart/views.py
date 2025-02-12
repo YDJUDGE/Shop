@@ -31,6 +31,9 @@ def update_cart(request, item_id):
     cart_item = get_object_or_404(CartItem, id=item_id, cart__user=request.user)
     if request.method == "POST":
         quantity = int(request.POST.get("quantity", 1))
-        cart_item.quantity = max(1, quantity)
-        cart_item.save()
+        if quantity > 0:
+            cart_item.quantity = quantity
+            cart_item.save()
+        else:
+            cart_item.delete()
     return redirect("cart:cart_view")

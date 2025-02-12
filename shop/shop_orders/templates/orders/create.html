@@ -1,0 +1,14 @@
+{% extends 'orders/base.html' %}
+
+{% block title %}
+Создание заказа
+{% endblock %}
+
+{% block body %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Оформить заказ</button>
+</form>
+{% endblock %}
+
