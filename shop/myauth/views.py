@@ -8,7 +8,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('signup')  # перенаправление на страницу (которой у меня нет)
+            return redirect('signup')
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})  # Перенаправление на страницу входа
@@ -22,8 +22,8 @@ def login_view(request):
             user = authenticate(username=username, password=password)  # Проверка учётных данных
             if user is not None:
                 login(request, user)
-                return redirect('products:list')  # перенаправление на страницу (которой у меня нет)
-    return render(request, 'registration/login.html', {'form': form})  # Перенаправление на страницу Логина
+                return redirect('products:list')
+    return render(request, 'registration/login.html', {'form': form})  # Перенаправление на страницу логина
 
 def logout_view(request):
     logout(request)
