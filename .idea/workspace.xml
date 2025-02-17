@@ -30,15 +30,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Train_projects/Shop-main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Train_projects/Shop-main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Train_projects\ShoeShop2" />
@@ -67,6 +67,30 @@
       <option name="presentableId" value="Default" />
       <updated>1739090579603</updated>
     </task>
+    <task id="LOCAL-00001" summary="Исправлены некоторые ошибки, которые были ранее. Усовершенствованы пути&#10;&#10;(cherry picked from commit 91720a0c4604741e3007f969ae7266011d2ae39f)">
+      <option name="closed" value="true" />
+      <created>1739797682689</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739797682689</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Исправлены некоторые ошибки, которые были ранее. Усовершенствованы пути&#10;&#10;(cherry picked from commit 91720a0c4604741e3007f969ae7266011d2ae39f)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены некоторые ошибки, которые были ранее. Усовершенствованы пути&#10;&#10;(cherry picked from commit 91720a0c4604741e3007f969ae7266011d2ae39f)" />
   </component>
 </project>
