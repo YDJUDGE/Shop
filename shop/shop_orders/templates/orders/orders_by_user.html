@@ -1,0 +1,31 @@
+{% extends 'orders/base.html' %}
+
+{% block title %}
+Заказы
+{% endblock %}
+
+{% block body %}
+<h1>Ваши заказы {{ user.username }}</h1>
+{% if all_orders %}
+<ul>
+    {% for order in all_orders %}
+    <li>
+        <b>Заказ №{{order.pk}} от {{ order.created|date:"d.m.Y H:i" }}</b><br>
+        <p>Сумма {{order.total_price}}$</p><br>
+        <p>Статус {% if order.paid %} Оплачен {% else %} Ожидает оплаты {% endif %}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>У вас нет пока заказов</p>
+{% endif %}
+
+<div>
+    <a href="{% url 'index' %}">Вернуться на главную</a>
+</div>
+
+<div>
+    <a href="{% url 'show_profile' user.profile.pk %}">Ваш профиль {{ user.username }}</a>
+</div>
+
+{% endblock %}

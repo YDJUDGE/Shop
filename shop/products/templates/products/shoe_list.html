@@ -1,0 +1,31 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+Список товаров
+{% endblock %}
+
+{%  block body %}
+    <h1>Товары</h1>
+    <ul>
+    {% for shoe in shoes %}
+    <li>
+        <a href="{% url 'products:detail_product' shoe.pk %}"> <h4>{{ shoe.name }}</h4></a>
+        <h3><em>{{ shoe.brand }}</em></h3>
+        <h4>{{ shoe.description }}</h4>
+        <h5>{{ shoe.price }}$</h5>
+        {% if shoe.image %}
+            <img src="{{ shoe.image.url }}" alt="{{ shoe.name }}" width="100">
+        {% else %}
+            <p>Изображение скоро появиться</p>
+        {% endif %}
+    </li>
+    {% endfor %}
+    </ul>
+    {% if user.is_authenticated and user.is_staff %}
+        <a href="{% url 'products:create_product' %}">Добавить товар</a>
+    {% endif %}
+<br>
+<div>
+    <a href="{% url 'index' %}">На главную</a>
+</div>
+{% endblock %}

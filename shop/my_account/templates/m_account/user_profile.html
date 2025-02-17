@@ -1,0 +1,45 @@
+{% extends 'm_account/base.html' %}
+
+{% block title %}
+Профиль пользователя
+{% endblock %}
+
+{% block body %}
+<h1>Профиль {{ user.username }}</h1>
+
+{% load static %}
+
+<div class="Body">
+{% if user.profile.profile_pic %}
+<img src="{{ user.profile.profile_pic.url }}" height="100" width="100"><br><br>
+{% else %}
+<img src="{% static 'images/profile/user_image.jpg' %}" height="100" width="100"><br><br>
+{% endif %}
+<p><b>Ник: {{ user.username }}</b></p>
+<p><b>Био: {{ user_account.bio }}</b></p>
+<p><em>Баланс: {{ user_account.balance }}</em></p>
+{% if user_account.vk %}
+<p>ВК: {{ user_account.vk }}</p>
+{% endif %}
+{% if user_account.twitter %}
+<p>X: {{ user_account.twitter }}</p>
+{% endif %}
+</div>
+
+<div>
+    <a href="{% url 'index' %}">
+    На начальную страницу
+    </a>
+</div>
+<br>
+<div>
+    <a href="{% url 'update_profile' %}">
+        Обновить профиль
+    </a>
+</div>
+<br>
+<div>
+    <a href="{% url 'logout' %}">Выход</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'orders/base.html' %}
+
+{% block title %}
+Спасибо за заказ
+{% endblock %}
+
+{% block body %}
+<h2>Спасибо за заказ</h2>
+<p>Номер заказа {{ order.pk }}</p>
+<p>Мы отправили на вашу электронну почту код подтверждения заказа</p>
+<ul>
+    <li><a href="{% url 'products:list' %}">Вернутся к списку</a></li>
+</ul>
+
+<div>
+    <a href="{% url 'show_profile' user.profile.pk %}">Перейти в профиль</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'm_account/base.html' %}
+
+{% block title %}
+Обновить профиль
+{% endblock %}
+
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+</form>
+<a href="{% url 'show_profile' user.pk %}"></a>
+{% endblock %}
+
