@@ -1,17 +1,50 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from .forms import LoginForm, SignUpForm
+from .models import MyCustomUser
+from .utils import send_verification_email, generate_special_code
 
 def signup_view(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('signup')
+            user = form.save(commit=False)
+            user.is_active = True
+            user.save()
+
+            send_verification_email(request, user)
+
+            request.session['user_id'] = user.pk  # Запоминаем ID пользователя в сессии
+            print(f"Юзер ID сохранён в сессии: {request.session['user_id']}")
+
+            print("Редирект на другую страницу(подтверждения)")
+            return redirect('verify_email')
     else:
         form = SignUpForm()
-    return render(request, 'registration/signup.html', {'form': form})  # Перенаправление на страницу входа
+    return render(request, 'registration/signup.html', {'form': form})
+
+def verify_email_view(request):
+    user_id = request.session.get('user_id')
+    verification_code = request.session.get("verification_code")
+    if not user_id:
+        return redirect('signup')
+
+    user = MyCustomUser.objects.get(id=user_id)
+
+    if request.method == "POST":
+        entered_code = request.POST.get('code')
+
+        if entered_code == user.verification_code:
+            user.is_active = True
+            user.verification_code = ""  # Очистка кода, чтобы он не хранился в БД
+            user.save()
+
+            del request.session["verification_code"]
+            login(request, user)
+            return redirect('products:list')
+        else:
+            return render(request, "registration/verify_email.html", {'error': 'Неверный код'})
+    return render(request, "registration/verify_email.html")
 
 def login_view(request):
     form = LoginForm(data=request.POST or None)

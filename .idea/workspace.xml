@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1be0775f-5e0d-4c44-9086-efec0624d5ed" name="Changes" comment="" />
+    <list default="true" id="1be0775f-5e0d-4c44-9086-efec0624d5ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/shop/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/my_account/templates/m_account/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/my_account/templates/m_account/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/my_account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/my_account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/myauth/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/myauth/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/myauth/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/myauth/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/myauth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/myauth/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/static/images/profile/user_image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shop/media/profile/user_image.jpg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

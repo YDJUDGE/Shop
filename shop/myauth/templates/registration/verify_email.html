@@ -1,0 +1,21 @@
+{% extends 'registration/base.html' %}
+
+{% block title %}
+Подтверждение Email
+{% endblock %}
+
+{% block body %}
+<h1>Подтвердите ваш Email</h1>
+
+{% if error %}
+<p style="color: red">{{ error }}</p>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <label for="code">Введите код из email:</label>
+    <input type="text" name="code" required>
+    <button type="submit">Подтвердить</button>
+</form>
+
+{% endblock %}

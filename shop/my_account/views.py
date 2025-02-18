@@ -13,8 +13,12 @@ def show_profile_view(request, pk):
 
 
 @receiver(post_save, sender=MyCustomUser)
-def save_profile(sender, instance, **kwargs):
-    instance.profile.save()
+def save_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+    else:
+        if hasattr(instance, 'profile'):
+            instance.profile.save()
 
 @login_required
 def update_profile(request):

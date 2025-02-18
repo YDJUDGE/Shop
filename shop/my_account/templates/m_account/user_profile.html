@@ -11,9 +11,9 @@
 
 <div class="Body">
 {% if user.profile.profile_pic %}
-<img src="{{ user.profile.profile_pic.url }}" height="100" width="100"><br><br>
+    <img src="{{ user.profile.profile_pic.url }}" height="100" width="100"><br><br>
 {% else %}
-<img src="{% static 'images/profile/user_image.jpg' %}" height="100" width="100"><br><br>
+    <img src="{% static 'images/profile/user_image.jpg' %}" height="100" width="100"><br><br>
 {% endif %}
 <p><b>Ник: {{ user.username }}</b></p>
 <p><b>Био: {{ user_account.bio }}</b></p>
