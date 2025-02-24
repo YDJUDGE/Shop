@@ -7,11 +7,15 @@
 {% block body %}
 <h1>Добро пожаловать в магазин</h1>
 <ul>
-    <li><a href="{% url 'index' %}">Главная</a></li>
     <li><a href="{% url 'login' %}">Вход</a></li>
     <li><a href="{% url 'signup' %}">Регистрация</a></li>
     <li><a href="{% url 'products:list' %}">Список товаров</a></li>
-    <li><a href="{% url 'show_profile' user.profile.pk %}">Профиль</a></li>
+    {% if user.is_authenticated %}
+        <li><a href="{% url 'show_profile' user.profile.pk %}">Профиль</a></li>
+        <li><a href="{% url 'wheel' %}">Колесо скидок</a></li>
+    {% else %}
+    {{ empty }}
+    {% endif %}
     <li><a href="{% url 'order:list_orders' %}">Мои заказы</a></li>
 </ul>
 {% endblock %}

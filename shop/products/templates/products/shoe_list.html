@@ -6,15 +6,24 @@
 
 {%  block body %}
     <h1>Товары</h1>
+
+    {% if discount %}
+    <h2>Ваша скидка, <b>{{ discount }}%</b> на все товары!</h2>
+    {% endif %}
+
     <ul>
     {% for shoe in shoes %}
     <li>
-        <a href="{% url 'products:detail_product' shoe.pk %}"> <h4>{{ shoe.name }}</h4></a>
-        <h3><em>{{ shoe.brand }}</em></h3>
-        <h4>{{ shoe.description }}</h4>
-        <h5>{{ shoe.price }}$</h5>
-        {% if shoe.image %}
-            <img src="{{ shoe.image.url }}" alt="{{ shoe.name }}" width="100">
+        <a href="{% url 'products:detail_product' shoe.product.pk %}"> <h4>{{ shoe.product.name }}</h4></a>
+        <h3><em>{{ shoe.product.brand }}</em></h3>
+        <h4>{{ shoe.product.description }}</h4>
+        {% if discount %}
+            <h5><del>{{ shoe.product.price }}$</del> <b>{{ shoe.discounted_price }}$</b></h5>
+        {% else %}
+        <p>Цена: {{ shoe.product.price }}$ </p>
+        {% endif %}
+        {% if shoe.product.image %}
+            <img src="{{ shoe.product.image.url }}" alt="{{ shoe.product.name }}" width="100">
         {% else %}
             <p>Изображение скоро появиться</p>
         {% endif %}

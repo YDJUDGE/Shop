@@ -5,6 +5,17 @@
 {% endblock %}
 
 {% block body %}
+
+{% if errors %}
+<ul>
+{% for field, error_list in errors.items %}
+    {% for error in error_list %}
+        <li>{{ field }}: {{ error }}</li>
+    {% endfor %}
+{% endfor %}
+</ul>
+{% endif %}
+
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}

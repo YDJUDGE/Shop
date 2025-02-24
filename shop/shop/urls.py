@@ -28,6 +28,7 @@ urlpatterns = [
     path("order/", include("shop_orders.urls")),
     path("", include("home.urls")),
     path("profile/", include("my_account.urls")),
+    path("wheel_of_fortune/", include('discount.urls')),
 ]
 
 # Для обработки картинок

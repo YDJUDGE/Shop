@@ -23,6 +23,7 @@ class CartItem(models.Model):
     cart = models.ForeignKey(Cart, related_name='items', on_delete=models.CASCADE)
     product = models.ForeignKey(Shoes, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)  # Даю возможнсть пользователю управлять количеством товара в корзине
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
     if TYPE_CHECKING:
         objects: Manager
@@ -31,5 +32,5 @@ class CartItem(models.Model):
         return f"{self.product.name} - {self.quantity}"
 
     def total_price(self):
-        return self.product.price * self.quantity
+        return self.price * self.quantity
 

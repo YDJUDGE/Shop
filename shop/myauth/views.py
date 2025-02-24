@@ -2,22 +2,19 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from .forms import LoginForm, SignUpForm
 from .models import MyCustomUser
-from .utils import send_verification_email, generate_special_code
+from .utils import send_verification_email
 
 def signup_view(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.is_active = True
+            user.is_active = False
             user.save()
 
             send_verification_email(request, user)
 
             request.session['user_id'] = user.pk  # Запоминаем ID пользователя в сессии
-            print(f"Юзер ID сохранён в сессии: {request.session['user_id']}")
-
-            print("Редирект на другую страницу(подтверждения)")
             return redirect('verify_email')
     else:
         form = SignUpForm()

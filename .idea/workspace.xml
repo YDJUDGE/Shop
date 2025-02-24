@@ -6,14 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="1be0775f-5e0d-4c44-9086-efec0624d5ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/cart/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/cart/templates/cart/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/cart/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/shop/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/my_account/templates/m_account/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/my_account/templates/m_account/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/home/templates/main_page/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/home/templates/main_page/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/my_account/templates/m_account/update_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/my_account/templates/m_account/update_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop/my_account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/my_account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/myauth/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/myauth/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/myauth/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/myauth/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop/myauth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/myauth/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/products/templates/products/shoe_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/products/templates/products/shoe_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/products/templates/products/shoes_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop/products/templates/products/shoes_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/products/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop/shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/static/images/profile/user_image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/shop/media/profile/user_image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop_orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop_orders/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -54,11 +60,11 @@
       <recent name="C:\Train_projects\ShoeShop2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Train_projects\Shop-main\shop\media\profile" />
       <recent name="C:\Train_projects\ShoeShop2\shop" />
       <recent name="C:\Train_projects\ShoeShop2\shop\media" />
       <recent name="C:\Train_projects\ShoeShop2\shop\cart" />
       <recent name="C:\Train_projects\ShoeShop2\shop\myauth\templates" />
-      <recent name="C:\Train_projects\ShoeShop2\shop\products\templates\products" />
     </key>
   </component>
   <component name="SharedIndexes">

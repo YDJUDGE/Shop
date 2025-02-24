@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "shop_orders.apps.ShopOrdersConfig",
     "home.apps.HomeConfig",
     "my_account.apps.MyAccountConfig",
+    "discount.apps.DiscountConfig",
 ]
 
 MIDDLEWARE = [

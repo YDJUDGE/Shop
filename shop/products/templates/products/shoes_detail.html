@@ -7,23 +7,31 @@
 {% block body %}
 <h1>{{ object.name }}</h1>
 <p>{{ object.description }}</p>
-<p>{{ object.price }}$</p>
 <p><em>{{ object.brand }}</em></p>
+{% if discount %}
+    <h4>Старая цена: <del>{{ object.price }}$</del></h4>
+    <h2>Цена со скидкой <b>{{ discounted_price }}$</b></h2>
+{% else %}
+<h2>Цена: {{ object.price }}$</h2>
+{% endif %}
 
 <div>
     <a href="{% url 'products:delete_product' object.pk %}">
     Удалить объект
     </a>
-</div>
+</div><br>
 
 <div>
     <a href="{% url 'products:list' %}">
     Вернуться к списку
     </a>
-</div>
+</div><br>
 
 <div>
-    <a href="{% url 'cart:add_to_cart' object.pk %}">Добавить в корзину</a>
+    <form method="post" action="{% url 'cart:add_to_cart' object.pk %}">
+    {% csrf_token %}
+        <button type="submit">Добавить в корзину</button>
+    </form>
 </div>
 
 {% endblock %}

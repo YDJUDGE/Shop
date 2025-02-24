@@ -15,7 +15,7 @@ def order_create(request):
             order.save()
             for item in cart_items:
                 OrderItem.objects.create(order=order, product=item.product, price=item.product.price, quantity=item.quantity)
-                total_price += item.product.price * item.quantity
+                total_price += item.price * item.quantity
             order.total_price = total_price
             order.save(update_fields=["total_price"])
             cart.delete()

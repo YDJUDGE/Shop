@@ -1,0 +1,39 @@
+{% extends 'wheel/base.html' %}
+{% load static %}
+
+{% block title %} Испытай удачу! {% endblock %}
+
+{% block body %}
+    <h2>Это генератор скидок</h2>
+    <h3>В нашем генераторе доступны следующие скидки:</h3>
+    <table>
+        <tr>
+            <td>5%</td>
+            <td>10%</td>
+            <td>15%</td>
+            <td>20%</td>
+            <td>25%</td>
+            <td>29%</td>
+        </tr>
+    </table>
+
+    {% if error %}
+        <p style="color: red">{{ error }}</p>
+    {% endif %}
+
+    {% if show_form %}
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Нажмите, чтобы получить скидку</button>
+        </form>
+    {% endif %}
+
+    {% if discount %}
+        <p>Поздравляем! Ваша скидка - {{ discount }}%. Она действует до {{ expires_at }}</p>
+    {% endif %}
+
+<div>
+    <a href="{% url 'products:list' %}">На страницу товаров</a>
+</div>
+
+{% endblock %}
